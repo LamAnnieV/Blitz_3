@@ -126,17 +126,11 @@ When the number of requests falls below the 600 threshold, the auto-scaling grou
 
 Although the auto-scaling group configured in step #3 above will automatically create another instance to handle the spike in requests.  However, since the second instance is only created after the number of requests hits 700 and it might take a couple of minutes to create the instance, that would still result in errors.
 
-If we know that the spikes happen during the holidays we can also 
+If we know that the spikes happen during the holidays we can set an auto-scaling policy or an auto-scaling schedule for a specific time and day that would scale to the required amount of instances to accept that traffic.
 
-
-
-
-
-The economic benefits of using auto-scaling and an ALB vs a stronger instance with more bandwidth (Like a c5.4xlarge)?
+## The economic benefits of using auto-scaling and an Application Load Balancer vs a stronger instance with more bandwidth (e.g. c5.4xlarge)?
 
 Cost Optimization: Auto Scaling can help optimize costs by allowing you to scale up when needed to handle traffic spikes and scale down during periods of lower demand. This can prevent over-provisioning and reduce unnecessary infrastructure costs.
-
-
 
 ## Blitz Diagram
 
