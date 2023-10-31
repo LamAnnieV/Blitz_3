@@ -88,7 +88,7 @@ There were zero errors (the number of requests that did not reach the instance) 
 
 ![Images](Images/Blitz_Results_700.png)
 
-![Images](Images/Blitz_700_2.png)
+![Images](Images/Blitz_Results_700_2.png)
 
 **QA Engineer using JMeter to blitz our Infrastructure with 1,000 requests:**
 
