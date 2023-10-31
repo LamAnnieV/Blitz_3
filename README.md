@@ -122,53 +122,19 @@ When the number of requests falls below the 600 threshold, the auto-scaling grou
 
 ![Image](Images/Draining.png)
 
+## Possible Issues with the configuration of the Auto-scaling group above
 
-High Availability: Maintaining a desired number of EC2 instances, it helps ensure the availability and reliability of your application. If one EC2 instance becomes unhealthy or fails, the Auto Scaling group can replace it with a new one.
+Although the auto-scaling group configured in step #3 above will automatically create another instance to handle the spike in requests.  However, since the second instance is only created after the number of requests hits 700 and it might take a couple of minutes to create the instance, that would still result in errors.
 
-Cost Optimization: Auto Scaling can help optimize costs by allowing you to scale up when needed to handle traffic spikes and scale down during periods of lower demand. This can prevent over-provisioning and reduce unnecessary infrastructure costs.
-
-Load Distribution: When used with Elastic Load Balancing, an Auto Scaling group can distribute incoming traffic evenly among multiple instances, enhancing the load balancing and fault tolerance of your application.
-
-Self-Healing: If an instance within the Auto Scaling group becomes unhealthy, the group can replace it automatically, ensuring that your application continues to run smoothly.
-
-Elasticity: It enables your application to be more elastic, automatically adjusting its capacity in response to changes in demand, which is particularly important for web applications with variable traffic patterns.
-
-Deployment and Updates: When you deploy a new version of your application to Elastic Beanstalk, the Auto Scaling group can facilitate a rolling update by gradually replacing instances with the new version, minimizing downtime.
-
-To use Auto Scaling with Elastic Beanstalk, you define scaling policies and criteria that dictate when and how the Auto Scaling group should adjust the number of instances. These policies can be based on CPU utilization, network traffic, custom metrics, or a schedule.
-
-Overall, an Auto Scaling group within Elastic Beanstalk helps you ensure that your application is both highly available and able to handle varying workloads efficiently, while also optimizing infrastructure costs.
-
-load balancers
-
-auto-scaling group
-
-cdn - if you are only doing static content
-
-you can pay for the other tools, but is it the most cost-effective
-
-Is there something that can handle the spikes in traffic on the holidays and go back to your infrastructure
-
-Temporary power to handle the traffic, then go right back down. 
-
-Autoscaling group
-
-[link](https://github.com/LamAnnieV/Elastic_Beanstalk/blob/main/EBS_with_ELB)
-
-What you can do to handle the request on those specific days?
-
-The automatic Scaling tab,  scaling policy, app demands changes quickly but with a recurring pattern or when your ec2 requires more time to initialize.  Autoscaling policy to make sure the instance is ready
-
-Predictive and scheduled scaling and overide at certain times using a schedule scaling...predetermine what's going to happen
-
-Set an auto-scaling policy or a auto-scaling schedule to schedule for a specific time and day for you to scale to the required amount of instances or containers you need to accept that traffic 
-
+If we know that the spikes happen during the holidays we can also 
 
 
 
 
 
 The economic benefits of using auto-scaling and an ALB vs a stronger instance with more bandwidth (Like a c5.4xlarge)?
+
+Cost Optimization: Auto Scaling can help optimize costs by allowing you to scale up when needed to handle traffic spikes and scale down during periods of lower demand. This can prevent over-provisioning and reduce unnecessary infrastructure costs.
 
 
 
