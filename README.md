@@ -110,17 +110,17 @@ Automatic Scaling: An Auto Scaling group can automatically increase or decrease 
 
 **Auto-scaling group before blitzing**
 
-[Image](Images/Instance_before_blitz.png)
+![Image](Images/Instance_before_blitz.png)
 
 **Auto-scaling group after blitzing with 1000 requests per second**
 
 The auto-scaling group is configured with an upper threshold of 700 and a lower threshold of 600.  When the 1000 request was sent to the application, since it was above the 700 threshold it triggered the auto-scaling group to add another instance:
 
-[Image](Images/after_blitz.png)
+![Image](Images/after_blitz.png)
 
 When the number of requests falls below the 600 threshold, the auto-scaling group will remove one instance:  
 
-[Image](Images/Draining.png)
+![Image](Images/Draining.png)
 
 
 High Availability: Maintaining a desired number of EC2 instances, it helps ensure the availability and reliability of your application. If one EC2 instance becomes unhealthy or fails, the Auto Scaling group can replace it with a new one.
